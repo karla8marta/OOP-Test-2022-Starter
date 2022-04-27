@@ -77,12 +77,26 @@ public class Nematode {
 
         for (int i = 0; i < getLength(); i++) {
 
-            na.fill(255);
-            na.stroke(0);
+            na.fill(0);
+            na.stroke(255);
             na.circle(400, 25 * i + 200, 25);
-        }
 
-        // if ( getLimbs() == 1);
+            if (isLimbs() == true) {
+                na.stroke(255);
+                na.fill(0);
+                na.line(412, 25 * i + 200, 425, 25 * i + 200);
+                na.line(385, 25 * i + 200, 370, 25 * i + 200);
+            }
+
+            if (isEyes() == true && i == 0) {
+
+            }
+
+            na.textSize(15);
+            na.fill(255);
+            na.text(getName(), 390, 165);
+
+        }
 
     }
 }
