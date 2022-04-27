@@ -73,7 +73,13 @@ public class Nematode {
                 + name + "]";
     }
 
+    public void delete(NematodeVisualiser na) {
+        na.background(0);
+    }
+
     public void render(NematodeVisualiser na) {
+
+        delete(na);
 
         for (int i = 0; i < getLength(); i++) {
 
@@ -93,6 +99,13 @@ public class Nematode {
                 na.line(385, 190, 370, 170);
                 na.circle(420, 170, 5);
                 na.circle(370, 170, 5);
+            }
+
+            if (getGender() == "m") {
+                na.fill(255);
+                na.stroke(0);
+                na.line(300, 25 * i + 200, 370, 25 * i + 210);
+
             }
 
             na.textSize(15);

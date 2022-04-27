@@ -16,6 +16,7 @@ public class NematodeVisualiser extends PApplet {
 			worm_num -= 1;
 			if (worm_num == -1) {
 				worm_num = 12;
+
 			}
 		}
 
@@ -60,7 +61,7 @@ public class NematodeVisualiser extends PApplet {
 
 	public void drawNematodes() {
 
-		nematodes.get(1).render(this);
+		nematodes.get(worm_num).render(this);
 
 	}
 
