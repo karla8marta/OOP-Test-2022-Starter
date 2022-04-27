@@ -73,4 +73,16 @@ public class Nematode {
                 + name + "]";
     }
 
+    public void render(NematodeVisualiser na) {
+
+        for (int i = 0; i < getLength(); i++) {
+
+            na.fill(255);
+            na.stroke(0);
+            na.circle(400, 25 * i + 200, 25);
+        }
+
+        // if ( getLimbs() == 1);
+
+    }
 }
