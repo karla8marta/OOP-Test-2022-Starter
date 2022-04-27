@@ -6,36 +6,41 @@ import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
 
-public class NematodeVisualiser extends PApplet
-{
+public class NematodeVisualiser extends PApplet {
+	ArrayList<Nematode> nematodes = new ArrayList<Nematode>();
 
-	public void keyPressed()
-	{		
-		if (keyCode == LEFT)
-		{
-		}		
+	public void keyPressed() {
+		if (keyCode == LEFT) {
+		}
 	}
 
-
-	public void settings()
-	{
+	public void settings() {
 		size(800, 800);
 	}
 
-	public void setup() 
-	{
+	public void setup() {
 		colorMode(HSB);
 		background(0);
-		smooth();				
-	}
-	
-
-	public void loadNematodes()
-	{
+		smooth();
 	}
 
+	public void loadNematodes() {
+		Table table = loadTable("nematodes.csv", "header");
 
-	public void draw()
-	{	
+		for (TableRow r : table.rows()) {
+			Nematode s = new Nematode(r);
+			nematodes.add(s);
+		}
+	}
+
+	public void printNematodes() {
+		for (Nematode s : nematodes) {
+			System.out.println(s);
+		}
+	}
+
+	public void draw() {
+		loadNematodes();
+		printNematodes();
 	}
 }
