@@ -16,6 +16,8 @@ public class NematodeVisualiser extends PApplet {
 
 	public void settings() {
 		size(800, 800);
+		loadNematodes();
+		printNematodes();
 	}
 
 	public void setup() {
@@ -40,7 +42,6 @@ public class NematodeVisualiser extends PApplet {
 	}
 
 	public void draw() {
-		loadNematodes();
-		printNematodes();
+
 	}
 }
