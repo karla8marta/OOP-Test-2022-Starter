@@ -89,12 +89,15 @@ public class Nematode {
             }
 
             if (isEyes() == true && i == 0) {
-
+                na.line(412, 190, 420, 170);
+                na.line(385, 190, 370, 170);
+                na.circle(420, 170, 5);
+                na.circle(370, 170, 5);
             }
 
             na.textSize(15);
             na.fill(255);
-            na.text(getName(), 390, 165);
+            na.text(getName(), 390, 155);
 
         }
 
