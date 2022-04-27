@@ -9,8 +9,21 @@ import processing.data.TableRow;
 public class NematodeVisualiser extends PApplet {
 	ArrayList<Nematode> nematodes = new ArrayList<Nematode>();
 
+	int worm_num = 0;
+
 	public void keyPressed() {
 		if (keyCode == LEFT) {
+			worm_num -= 1;
+			if (worm_num == -1) {
+				worm_num = 12;
+			}
+		}
+
+		if (keyCode == RIGHT) {
+			worm_num += 1;
+			if (worm_num == 13) {
+				worm_num = 0;
+			}
 		}
 	}
 
